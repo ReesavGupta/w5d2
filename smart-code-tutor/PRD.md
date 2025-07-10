@@ -108,23 +108,23 @@ Build a full-stack web application that allows users to write and execute Python
 **Check off each item as you complete it in each iteration.**
 
 ### Project Setup
-- [ ] Initialize repo and project structure
+- [x] Initialize repo and project structure
 - [ ] Write initial README
 
 ### Frontend
-- [ ] Set up React app
-- [ ] Integrate Monaco Editor
-- [ ] Add language selection (Python/JS)
-- [ ] Implement WebSocket client
-- [ ] Display streamed output
+- [x] Set up React app
+- [x] Integrate Monaco Editor
+- [x] Add language selection (Python/JS)
+- [x] Implement WebSocket client
+- [x] Display streamed output
 - [ ] Display streamed explanations
 - [ ] Add chat-like UI for explanations
 
 ### Backend
-- [ ] Set up FastAPI server
-- [ ] Implement WebSocket endpoint
-- [ ] Accept code and language input
-- [ ] Stream output to client
+- [x] Set up FastAPI server
+- [x] Implement WebSocket endpoint
+- [x] Accept code and language input
+- [x] Stream output to client
 
 ### Sandboxed Execution
 - [ ] Integrate E2B for Python
