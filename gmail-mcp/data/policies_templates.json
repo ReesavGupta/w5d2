@@ -1,0 +1,37 @@
+[
+  {
+    "id": "policy-001",
+    "type": "policy",
+    "title": "Refund Policy",
+    "content": "Customers are eligible for a full refund within 30 days of purchase if the product is unused and in original packaging.",
+    "tags": ["refund", "returns", "customer"]
+  },
+  {
+    "id": "policy-002",
+    "type": "policy",
+    "title": "Data Privacy Policy",
+    "content": "We do not share customer data with third parties without explicit consent. All data is stored securely in compliance with GDPR.",
+    "tags": ["privacy", "gdpr", "data"]
+  },
+  {
+    "id": "faq-001",
+    "type": "faq",
+    "question": "How can I reset my password?",
+    "answer": "To reset your password, click on 'Forgot Password' at the login page and follow the instructions sent to your email.",
+    "tags": ["password", "reset", "account"]
+  },
+  {
+    "id": "template-001",
+    "type": "template",
+    "title": "Refund Response",
+    "template": "Hello {customer_name},\n\nThank you for contacting us. As per our refund policy, you are eligible for a full refund within 30 days of purchase if the product is unused and in its original packaging. Please provide your order number so we can process your request.\n\nBest regards,\nSupport Team",
+    "tags": ["refund", "response"]
+  },
+  {
+    "id": "template-002",
+    "type": "template",
+    "title": "Data Privacy Response",
+    "template": "Hello {customer_name},\n\nWe take your privacy seriously. As per our data privacy policy, we do not share your data with third parties without your consent. If you have any concerns, please let us know.\n\nBest regards,\nSupport Team",
+    "tags": ["privacy", "response"]
+  }
+] 
