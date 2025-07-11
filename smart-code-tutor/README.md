@@ -9,7 +9,7 @@
 ## 🎥 Demo Video
 
 <div align="center">
-  <video src="backend/public/recording.mp4" controls width="600">
+  <video src="./backend/public/recording.mp4" controls width="600">
     Your browser does not support the video tag.
   </video>
 </div>
