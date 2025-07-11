@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+httpx
+sse-starlette
+langchain
+langchain-community
+langchain-pinecone
+langchain-nomic
+pinecone-client
+langchain-groq
+finnhub-python 

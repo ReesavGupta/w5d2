@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Stock Market Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📈 Real-Time Stock Market Chat</h1>
+    </header>
+    <main>
+      <section id="stock-section">
+        <h2>Live Stock Price</h2>
+        <input type="text" id="stock-symbol" placeholder="Enter Stock Symbol (e.g., AAPL)" value="AAPL">
+        <button id="subscribe-stock">Subscribe</button>
+        <div id="stock-price"></div>
+      </section>
+      <section id="news-section">
+        <h2>Trending Financial News</h2>
+        <ul id="news-list"></ul>
+      </section>
+      <section id="chat-section">
+        <h2>AI-Powered Stock Chat</h2>
+        <div id="chat-history"></div>
+        <div class="chat-input-row">
+          <input type="text" id="chat-input" placeholder="Ask a question or request a recommendation...">
+          <button id="send-chat">Send</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html> 
