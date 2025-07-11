@@ -7,6 +7,7 @@ from e2b_code_interpreter import Sandbox
 from rag_engine import retrieve_relevant_docs, generate_explanation
 from langchain_groq import ChatGroq
 from pydantic.types import SecretStr
+import asyncio
 
 load_dotenv()
 
@@ -49,6 +50,16 @@ def execute_code(code, language):
     except Exception as e:
         error = str(e)
     return output, error
+
+# Async wrappers for blocking functions
+def sync_execute_code(*args, **kwargs):
+    return execute_code(*args, **kwargs)
+
+def sync_detect_intent(*args, **kwargs):
+    return detect_intent(*args, **kwargs)
+
+def sync_route_llm_response(*args, **kwargs):
+    return route_llm_response(*args, **kwargs)
 
 # --- Intent Detection and Routing ---
 
@@ -135,16 +146,16 @@ async def websocket_endpoint(websocket: WebSocket):
                 await websocket.send_text(response)
                 continue
             if action == "run":
-                output, error = execute_code(code, language)
+                output, error = await asyncio.to_thread(sync_execute_code, code, language)
                 response_obj = {"output": output, "error": error}
             elif action == "explain":
                 output = payload.get("output", "")
                 error = payload.get("error", "")
                 user_message = payload.get("user_message", "")
                 # 1. Detect intent
-                intent = detect_intent(user_message, groq_api_key)
+                intent = await asyncio.to_thread(sync_detect_intent, user_message, groq_api_key)
                 # 2. Route to correct LLM prompt
-                explanation = route_llm_response(intent, code, output, error, user_message, groq_api_key)
+                explanation = await asyncio.to_thread(sync_route_llm_response, intent, code, output, error, user_message, groq_api_key)
                 response_obj = {"explanation": explanation, "intent": intent}
             else:
                 response_obj = {"error": f"Unknown action: {action}"}
