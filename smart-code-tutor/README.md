@@ -8,11 +8,7 @@
 
 ## 🎥 Demo Video
 
-<div align="center">
-  <video src="./backend/public/recording.mp4" controls width="600">
-    Your browser does not support the video tag.
-  </video>
-</div>
+[▶️ Click here to watch or download the demo video](./backend/public/recording.mp4)
 
 ---
 
