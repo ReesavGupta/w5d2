@@ -5,6 +5,8 @@ interface EditorProps {
   language?: 'python' | 'javascript';
   value?: string;
   onChange?: (value: string | undefined) => void;
+  height?: string;
+  onMount?: (editor: any, monaco: any) => void;
 }
 
 const LANGUAGE_HINTS: Record<string, string> = {
@@ -17,7 +19,7 @@ const LANGUAGE_TEMPLATES: Record<string, string> = {
   javascript: 'console.log("Hello, World!");',
 };
 
-const Editor: React.FC<EditorProps> = ({ language = 'python', value = '', onChange }) => {
+const Editor: React.FC<EditorProps> = ({ language = 'python', value = '', onChange, height = '400px', onMount }) => {
   const editorRef = useRef(null);
   const prevLanguage = useRef(language);
 
@@ -37,11 +39,12 @@ const Editor: React.FC<EditorProps> = ({ language = 'python', value = '', onChan
         {LANGUAGE_HINTS[language]}
       </div>
       <MonacoEditor
-        height="400px"
+        height={height}
         language={language}
         value={value}
         theme="vs-dark"
         onChange={onChange}
+        onMount={onMount}
         options={{
           fontSize: 16,
           minimap: { enabled: false },

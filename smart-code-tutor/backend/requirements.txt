@@ -1,5 +1,14 @@
+pypdf
 fastapi
 uvicorn
 websockets
 e2b_code_interpreter
 python-dotenv
+langchain
+langchain-community
+langchain-pinecone
+langchain-nomic
+pinecone-client
+openai
+# If using Groq LLM via LangChain
+langchain-groq

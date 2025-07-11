@@ -1,1 +1,7 @@
 @import "tailwindcss";
+.monaco-diff-bg-red {
+  background: rgba(255,0,0,0.15) !important;
+}
+.monaco-diff-bg-green {
+  background: rgba(0,255,0,0.15) !important;
+}

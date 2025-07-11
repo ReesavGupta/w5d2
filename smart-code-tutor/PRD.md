@@ -127,16 +127,16 @@ Build a full-stack web application that allows users to write and execute Python
 - [x] Stream output to client
 
 ### Sandboxed Execution
-- [ ] Integrate E2B for Python
-- [ ] Integrate E2B for JavaScript
-- [ ] Capture stdout, stderr, results
+- [x] Integrate E2B for Python
+- [x] Integrate E2B for JavaScript
+- [x] Capture stdout, stderr, results
 
 ### RAG Pipeline
-- [ ] Embed documentation with Nomic
-- [ ] Store/retrieve embeddings in Pinecone
-- [ ] Integrate Groq LLM via langchain-groq
-- [ ] Retrieve relevant docs on execution/error
-- [ ] Generate explanations with LLM
+- [x] Embed documentation with Nomic
+- [x] Store/retrieve embeddings in Pinecone
+- [x] Integrate Groq LLM via langchain-groq
+- [x] Retrieve relevant docs on execution/error
+- [x] Generate explanations with LLM
 
 ### Security & Concurrency
 - [ ] Enforce sandboxing
