@@ -1,8 +1,8 @@
 // --- Configurable Backend URLs ---
 // Set these in a <script> tag before main.js is loaded, e.g.:
 // <script>window.BACKEND_API_URL = 'https://your-backend.onrender.com'; window.BACKEND_WS_URL = 'wss://your-backend.onrender.com';</script>
-const API_URL = window.BACKEND_API_URL || 'http://localhost:8000';
-const WS_URL = window.BACKEND_WS_URL || 'ws://localhost:8000';
+const API_URL = 'https://w5d2.onrender.com';
+const WS_URL =  'wss://w5d2.onrender.com/ws/chat'
 
 // --- Live Stock Price (SSE) ---
 let stockEventSource = null;
